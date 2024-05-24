@@ -6,7 +6,9 @@ Geo Sharer is a React Native application that allows users to get their address 
 
 ### Prerequisites
 
-Ensure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+- Ensure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+
+- Add values for `GOOGLE_MAPS_API_KEY` and `API ENDPOINT` the `App.tsx`
 
 ### Running the Application
 
