@@ -8,8 +8,7 @@ Geo Sharer is a React Native application that allows users to get their address 
 
 - Ensure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-- Add values for `GOOGLE_MAPS_API_KEY` and `API ENDPOINT` the `App.tsx`
-
+- Add values for `GOOGLE_MAPS_API_KEY` (to be able get human readable location formats) and `API ENDPOINT` (to be able to share the info to a Rest API) in [App.tsx](./App.tsx) file.
 ### Running the Application
 
 #### 1. Start the Metro Server
@@ -59,7 +58,7 @@ Open `App.tsx` in your text editor of choice and edit some lines. Press the R ke
 This project is maintained by:
 
 - [MURANGWA Pacifique @pacifiquem](https://github.com/pacifiquem)
-- [ISHIMWE Vainqueur @IVainqueur](https://github.com/Ivainqueur)
+- [ISHIMWE Vainqueur @IVainqueur](https://github.com/ivainqueur)
 
 ## Troubleshooting
 
