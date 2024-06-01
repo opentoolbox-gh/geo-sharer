@@ -168,30 +168,30 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Text>{loading ? 'Loading...' : 'Current info'}</Text>
+        <Text style={styles.sectionTitle}>{loading ? 'Loading...' : 'Current info'}</Text>
         <View style={styles.line}>
-          <Text>{'longitude'.padEnd(14, ' ')}</Text>
+          <Text style={styles.monospaceFont}>{'longitude'.padEnd(14, ' ')}</Text>
           <Text>{locationData.coords?.longitude ?? 'unknown'}</Text>
         </View>
         <View style={styles.line}>
-          <Text>{'latitude'.padEnd(14, ' ')}</Text>
+          <Text style={styles.monospaceFont}>{'latitude'.padEnd(14, ' ')}</Text>
           <Text>{locationData.coords?.latitude ?? 'unknown'}</Text>
         </View>
         <View style={styles.line}>
-          <Text>{'accuracy'.padEnd(14, ' ')}</Text>
+          <Text style={styles.monospaceFont}>{'accuracy'.padEnd(14, ' ')}</Text>
           <Text>{locationData.coords?.accuracy ?? 'unknown'}</Text>
         </View>
         <View style={styles.line}>
-          <Text>{'speed'.padEnd(14, ' ')}</Text>
+          <Text style={styles.monospaceFont}>{'speed'.padEnd(14, ' ')}</Text>
           <Text>{locationData.coords?.speed ?? 'unknown'}</Text>
         </View>
         <View style={styles.line}>
-          <Text>{'location'.padEnd(14, ' ')}</Text>
+          <Text style={styles.monospaceFont}>{'location'.padEnd(14, ' ')}</Text>
           <Text>{locationData.location ?? 'unknown'}</Text>
         </View>
 
         <View style={styles.shareSection}>
-          <Text style={styles.shareSectionTitle}>API to share to:</Text>
+          <Text style={styles.sectionTitle}>API to share to:</Text>
           <TextInput
             placeholder="API URL"
             style={editingApi ? styles.apiInput : styles.apiInputDisabled}
@@ -208,7 +208,7 @@ function App(): React.JSX.Element {
 
         {/* API CALL LOGS */}
         <View style={styles.shareSection}>
-          <Text style={styles.shareSectionTitle}>API Call Logs:</Text>
+          <Text style={styles.sectionTitle}>API Call Logs:</Text>
           {logs.map((log, index) => (
             <Text key={index}>{log}</Text>
           ))}
@@ -220,9 +220,10 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   main: {padding: 10},
-  line: {flex: 1, flexDirection: 'row', gap: 10},
+  line: {flex: 1, flexDirection: 'row', gap: 10, alignItems: 'center'},
+  monospaceFont: {fontFamily: 'monospace'},
   shareSection: {flex: 1, flexDirection: 'column', gap: 10, marginTop: 30},
-  shareSectionTitle: {fontSize: 20},
+  sectionTitle: {fontSize: 20},
   apiInput: {
     height: 40,
     borderColor: 'gray',
